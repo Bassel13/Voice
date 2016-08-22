@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+    <ImageButton
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:adjustViewBounds="true"
+        android:maxHeight="260dp"
+        android:maxWidth="260dp"
+        android:scaleType="fitCenter"
+        android:onClick="sendMessage"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.08"
+        android:src="@drawable/record_button"
+        android:background="#00ffffff" />
+
+</LinearLayout>
