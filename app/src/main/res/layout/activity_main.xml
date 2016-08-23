@@ -4,21 +4,23 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:orientation="vertical">
+android:orientation="vertical"
+    android:background="@drawable/background2"
+    android:gravity="center"
+    android:weightSum="1">
 
     <ImageButton
-        android:layout_width="365dp"
-        android:layout_height="wrap_content"
+        android:layout_width="298dp"
+        android:layout_height="358dp"
         android:text="@string/button_send"
         android:adjustViewBounds="true"
-        android:maxHeight="260dp"
-        android:maxWidth="260dp"
-        android:scaleType="fitCenter"
+        android:maxHeight="130dp"
+        android:maxWidth="130dp"
+        android:scaleType="centerInside"
         android:onClick="sendMessage"
         android:gravity="center"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.08"
         android:src="@drawable/record_button"
-        android:background="#00ffffff" />
+        android:background="#00ffffff"
+        android:layout_weight="0.40" />
 
 </LinearLayout>
