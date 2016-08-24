@@ -38,14 +38,17 @@ public class MainActivity extends AppCompatActivity {
     private int step = 1; //1=record, 2=stop, 3=play
     private boolean press = true;
 
+    ImageButton button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ImageView img= (ImageView) findViewById(R.id.bassel);
         //img.animate().translationX(100).setDuration(15000);
+        boolean permission = isPermissionGranted();
 
-        ImageButton button = (ImageButton) findViewById(R.id.imageButton);
+        button = (ImageButton) findViewById(R.id.imageButton);
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -60,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-        boolean permission = isPermissionGranted();
     }
+
+
+
     /** Called when the user clicks the Send button */
     public void sendMessage(View view) {
       /*  Intent intent = new Intent(this, Edit.class);
@@ -76,17 +79,22 @@ public class MainActivity extends AppCompatActivity {
     public void onRecord(boolean start) {
         if (start) {
             startRecording();
+            button.setImageResource(R.drawable.buttons2);
+
         } else {
             stopRecording();
-            step = 3;
+            button.setImageResource(R.drawable.buttons3);
+            step = 2;
         }
         press = !press;
     }
 
     private void onPlay(boolean start) {
         if (start) {
+            System.out.println("start playing");
             startPlaying();
         } else {
+            System.out.println("stop playing");
             stopPlaying();
         }
     }
