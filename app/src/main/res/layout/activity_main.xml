@@ -1,26 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
+android:layout_width="wrap_content"
 android:layout_height="match_parent"
-android:orientation="vertical"
-    android:background="@drawable/background2"
-    android:gravity="center"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:gravity="bottom"
+    android:baselineAligned="false"
+    android:clickable="false"
+    android:focusableInTouchMode="false">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/backdrop2"
+        android:id="@+id/bassel"
+        android:layout_alignParentTop="true" />
 
     <ImageButton
-        android:layout_width="298dp"
-        android:layout_height="358dp"
+        android:layout_width="248dp"
+        android:layout_height="426dp"
         android:text="@string/button_send"
         android:adjustViewBounds="true"
         android:maxHeight="130dp"
         android:maxWidth="130dp"
         android:scaleType="centerInside"
         android:onClick="sendMessage"
-        android:gravity="center"
-        android:src="@drawable/record_button"
+        android:gravity="top"
+        android:src="@drawable/buttons1"
         android:background="#00ffffff"
-        android:layout_weight="0.40" />
+        android:baselineAlignBottom="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:longClickable="false"
+        android:contextClickable="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="156dp"
+        android:id="@+id/imageButton" />
 
-</LinearLayout>
+</RelativeLayout>
